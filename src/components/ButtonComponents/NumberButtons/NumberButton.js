@@ -1,7 +1,11 @@
 import React from "react";
 
-function NumberButton({ num }) {
-  return <button key={num}>{num}</button>;
+function NumberButton({ changeDisplay, num }) {
+  return (
+    <button key={num} onClick={num => changeDisplay}>
+      {num}
+    </button>
+  );
 }
 
 export default NumberButton;
