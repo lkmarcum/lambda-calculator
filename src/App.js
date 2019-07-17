@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./App.scss";
 // STEP 4 - import the button and display components
 import Numbers from "./components/ButtonComponents/NumberButtons/Numbers";
 import Operators from "./components/ButtonComponents/OperatorButtons/Operators";
@@ -28,9 +28,15 @@ function App() {
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
         <Display display={displayStatus} />
-        <Specials />
-        <Numbers change={changeDisplay} />
-        <Operators />
+        <div className="button-container">
+          <div className="left-buttons">
+            <Specials />
+            <Numbers change={changeDisplay} />
+          </div>
+          <div className="right-buttons">
+            <Operators />
+          </div>
+        </div>
       </div>
     </div>
   );
